@@ -1,8 +1,13 @@
-const getSymbolCreator = () => typeof Symbol === 'function' ? Symbol : (name) => `@@redux-symbiote/${name}`
+'use strict'
 
-const createSymbol = getSymbolCreator()
+function getSymbolCreator() {
+  return typeof Symbol === 'function'
+    ? Symbol
+    : function Symbol(name) { return '@@redux-symbiote/' + name };
+}
 
+var createSymbol = getSymbolCreator()
 
 module.exports = {
   getActionCreator: createSymbol('action function for actions list'),
-}
+};
