@@ -4,7 +4,7 @@
   "description": "Symbol for redux-symbiote and symbiote-fetching",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"no test specified\" && true"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sergeysova/symbiote-symbol/issues"
   },
-  "homepage": "https://github.com/sergeysova/symbiote-symbol#readme"
+  "homepage": "https://github.com/sergeysova/symbiote-symbol#readme",
+  "dependencies": {
+    "symbol-creator": "^1.0.0"
+  }
 }

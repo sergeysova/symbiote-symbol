@@ -1,13 +1,8 @@
-'use strict'
+"use strict";
+var getSymbolCreator = require("symbol-creator").getSymbolCreator;
 
-function getSymbolCreator() {
-  return typeof Symbol === 'function'
-    ? Symbol
-    : function Symbol(name) { return '@@redux-symbiote/' + name };
-}
-
-var createSymbol = getSymbolCreator()
+var createSymbol = getSymbolCreator("symbiote");
 
 module.exports = {
-  getActionCreator: createSymbol('action function for actions list'),
+  getActionCreator: createSymbol("action function for actions list")
 };
